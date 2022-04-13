@@ -1,3 +1,4 @@
+//funcion donde se calcula el valor de y
 const calcularValorY = (paramValorY) => {
   const array = [];
   for (let i = 0; i < paramValorY.length; i++) {
@@ -8,8 +9,8 @@ const calcularValorY = (paramValorY) => {
   return array;
 };
 
+//funcion donde se crea el modelo
 const funcionLineal = async (paramValor) => {
-  console.log(paramValor);
   const modelo = tf.sequential();
   modelo.add(
     tf.layers.dense({
@@ -43,6 +44,7 @@ const funcionLineal = async (paramValor) => {
   return result[0][0];
 };
 
+//Evento que ejecuta su contenido luego de que se complete la carga de la página
 window.addEventListener("DOMContentLoaded", (event) => {
   document.getElementById("divAlert").innerText =
     "Ahora puedes ingresar los valores";
